@@ -245,6 +245,10 @@ hr {
     margin-top: 60px;
 }
 
+.section--gray {
+    background-color: #f8f8f8;
+}
+
 .section__header {
     margin: 0 auto 50px;
 
@@ -471,20 +475,36 @@ hr {
 /* Accordion */
 .accordion__item {
     border: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+}
+
+.accordion__item.active .accordion__content {
+    display: block;
+}
+
+.accordion__item.active .accordion__header {
+    border-bottom-color: #e5e5e5;
+}
+
+.accordion__item.active .accordion__header:after {
+    transform: rotate(-45deg);
+    margin-top: 5px;
 }
 
 .accordion__header {
     padding: 15px 20px 15px 65px;
     display: flex;
-    border-bottom: 1px solid #e5e5e5 ;
+    border-bottom: 1px solid transparent ;
     position: relative;
+
+    cursor: pointer;
 }
 
 .accordion__header:after {
     content: "";
     display: block;
-    width: 22px;
-    height: 22px;
+    width: 16px;
+    height: 16px;
 
     border-top: 2px solid #ccc;
     border-right: 2px solid #ccc;
@@ -513,11 +533,93 @@ hr {
 }
 
 .accordion__content {
-    padding: 15px 20px;
+    padding: 8px 20px;
     color: #999999;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 15px;
     font-style: italic;
+
+    display: none;
     
+}
+
+/* Feedback */
+.feedback {
+    display: flex;
+    position: relative;
+}
+
+.feedback__icon {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    z-index: 1;
+
+    padding: 40px 40px 40px 35px;
+    margin-left: 100px;
+
+    border: 2px solid #95e1d3;
+
+}
+
+.feedback__content {
+    margin: 0 55px 0 320px;
+}
+
+.feedback__text {
+    font-family: 'Roboto', sans-serif;
+    color: #9f9f9f;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.feedback__name {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+}
+
+.feedback__name:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 3px;
+
+    margin-right: 30px;
+    
+
+    background-color: #f38181;
+}
+
+.feedback__btn {
+    font-size: 0;
+    color: transparent;
+
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.feedback__btn:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    border-top: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+
+}
+
+.feedback__btn--prev {
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.feedback__btn--next {
+    right: 0;
+    transform: rotate(135deg);
 }
