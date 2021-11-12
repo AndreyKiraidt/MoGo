@@ -1,1 +1,1 @@
-"# MoGo" 
+https://andreykiraidt.github.io/MoGo/
