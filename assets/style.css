@@ -286,54 +286,57 @@ hr {
     color: #b3b3b3;
 }
 
-/* About */
-.about {
+/* Card */
+.card {
     display: flex;
     justify-content: space-between;
 }
 
-.about__item {
+.card__item {
     margin: 40px 0;
-    position: relative;
     width: 380px;
+}
+
+.card__inner {
+    position: relative;
     background-color: #95e1d3;
 }
 
-.about__item:hover .about__image {
+.card__item:hover .card__image {
     transform: translate3d(-10px, -10px, 0);
 }
 
-.about__item:hover .about__text {
+.card__item:hover .card__text {
     transform: translate3d(-10px, -10px, 0);
 }
 
-.about__item:hover .about__logo {
+.card__item:hover .card__logo {
     transform: translate3d(-10px, -10px, 0);
 }
 
-.about__item:hover .about__image img {
+.card__item:hover .card__image img {
     opacity: .1;
 }
 
-.about__item:hover .about__text {
+.card__item:hover .card__text {
     opacity: 1;
 }
 
-.about__item:hover .about__logo {
+.card__item:hover .card__logo {
     opacity: 1;
 }
 
-.about__image {
+.card__image {
     background: linear-gradient(to bottom, #f38181, #fce38a);
     transition: transform .1s linear;
 }
 
-.about__image img {
+.card__image img {
     display: block;
     transition: opacity .1s linear;
 }
 
-.about__text {
+.card__text {
     width: 100%;
 
     font-size: 18px;
@@ -352,7 +355,7 @@ hr {
     transition: opacity .2s linear;
 }
 
-.about__logo {
+.card__logo {
     width: 100%;
 
     opacity: 0;
@@ -622,4 +625,54 @@ hr {
 .feedback__btn--next {
     right: 0;
     transform: rotate(135deg);
+}
+
+
+/* Social */
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social__item {
+    width: 55px;
+    height: 55px;
+    padding: 12px 10px;
+    background-color: #fce38a;
+    border-right: 1px solid #f38181;
+
+    font-size: 30px;
+    line-height: 1;
+
+    text-decoration: none;
+    color: #f38181;
+
+    transition: background-color .1s linear, color .1s linear;
+}
+
+.social__item:last-child {
+    border-right: none;
+}
+
+.social__item:hover {
+    background-color: #f38181;
+    color: #fff;
+}
+
+/* Team */
+.team__info {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.team__name {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.team__position {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #ccc;
 }
